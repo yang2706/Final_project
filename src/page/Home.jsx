@@ -110,7 +110,7 @@ function Home() {
     <div className="w-full bg-black text-white">
 
 
-      <section className="relative bg-cover bg-no-repeat opacity-70 bg-[url('https://i.pinimg.com/1200x/3b/88/8a/3b888ae33caddd009ea0262a6dace304.jpg')] w-full h-[70vh]">
+      <section className="relative bg-cover bg-no-repeat opacity-70 bg-[url('https://i.pinimg.com/1200x/3b/88/8a/3b888ae33caddd009ea0262a6dace304.jpg')] w-full h-[40vh] md:h-[70vh]">
         <img
           src=""
           className="w-full h-full object-cover opacity-70"
