@@ -7,7 +7,7 @@ function Navbar1() {
     return (
         <div className='w-full flex justify-between bg-black text-white py-2 px-6'>
             <div className='flex items-center'>
-                <img src="src/img/image.png" alt="" className='w-[60px]' />
+                <img src="/img/image.png" alt="" className='w-[60px]' />
             </div>
             <div className='hidden md:flex items-center text-[17px] gap-2 text-gray-300'>
                 <Link to={'/home'}>
