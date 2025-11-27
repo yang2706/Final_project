@@ -9,26 +9,22 @@ function Navbar1() {
             <div className='flex items-center'>
                 <img src="src/img/image.png" alt="" className='w-[60px]' />
             </div>
-            <div className='hidden md:flex items-center text-[17px] gap-2'>
+            <div className='hidden md:flex items-center text-[17px] gap-2 text-gray-300'>
                 <Link to={'/home'}>
-                    <p className='cursor-pointer hover:text-red-500 hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Home</p>
+                    <p className='cursor-pointer hover:text-white hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Home</p>
                 </Link>
                 <Link to={'/movie'}>
-                    <p className='cursor-pointer hover:text-red-500 hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Movie</p>
+                    <p className='cursor-pointer hover:text-white hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Movie</p>
                 </Link>
                 <Link>
-                    <p className='cursor-pointer hover:text-red-500 hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Trending</p>
+                    <p className='cursor-pointer hover:text-white hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Trending</p>
                 </Link>
                 <Link>
-                    <p className='cursor-pointer hover:text-red-500 hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Contact</p>
+                    <p className='cursor-pointer hover:text-white hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Contact</p>
                 </Link>
                 <Link>
-                    <p className='cursor-pointer hover:text-red-500 hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Service</p>
+                    <p className='cursor-pointer hover:text-white hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Service</p>
                 </Link>
-
-
-
-
 
             </div>
             <div className='flex items-center gap-4'>
