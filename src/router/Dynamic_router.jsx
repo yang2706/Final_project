@@ -18,13 +18,13 @@ function Dynamic_router() {
 
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black to-transparent flex flex-col justify-center px-10">
                             <h1 className="text-2xl md:text-5xl font-bold max-w-xl leading-tight">
-                                Watch The Best Movies & Series
+                                {items.title}
                             </h1>
                             <p className="mt-4 text-lg max-w-md opacity-80">
-                                Stream unlimited movies and series anytime, anywhere.
+                                {items.desc}
                             </p>
                             <button className="mt-6 bg-red-600 cursor-pointer md:w-[200px] px-4 py-2 w-[140px] rounded-lg text-lg font-semibold hover:bg-red-700 transition">
-                                Explore Now
+                                PLay Now
                             </button>
                         </div>
                     </section>
