@@ -7,15 +7,15 @@ function Home() {
   const card = [
     {
       id: 1,
-      title: 'Use Force',
+      title: 'Nika',
       img: '/img/photo_2025-11-27_21-47-41.jpg',
-      rating: 8.2
+      rating: 'She is so cute'
     },
     {
       id: 2,
-      title: 'Tom Hardy',
+      title: 'Nika',
       img: '/img/photo_2025-11-27_21-47-55.jpg',
-      rating: 9.8
+      rating: 'I love her'
     },
     {
       id: 3,
