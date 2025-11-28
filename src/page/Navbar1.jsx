@@ -49,7 +49,7 @@ function Navbar1() {
             
                 {open && (
 
-                    <ul className="absolute top-18 justify-center ml-[280px] leading-4 items-center w-[22%] text-white text-[20px] backdrop-blur-lg z-50 flex flex-col gap-4 p-6 md:hidden">
+                    <ul className="absolute top-18 ml-[277px] leading-4 items-center w-[23%] text-white text-[20px] backdrop-blur-lg z-50 flex flex-col gap-4 p-6 md:hidden">
                         <Link to={'/home'}>
                             <li className="">Home</li>
                         </Link>
@@ -58,7 +58,7 @@ function Navbar1() {
                         </Link>
 
                         <Link>
-                            <li className=" cursor-pointer">Treding</li>
+                            <li className=" cursor-pointer">Trending</li>
                         </Link>
 
                         <Link>
