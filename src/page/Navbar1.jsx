@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import { RxCross2 } from "react-icons/rx";
+
 function Navbar1() {
+    const [open, setopen] = useState(false);
     return (
         <div className='w-full flex justify-between bg-black text-white py-2 px-6'>
             <div className='flex items-center'>
@@ -33,16 +36,52 @@ function Navbar1() {
                     <input
                         type="text"
                         placeholder="Search movies..."
-                        className="hidden md:flex lg:flex lg-hidden bg-transparent outline-none text-sm px-2 py-1"
+                        className="hidden md:flex bg-transparent outline-none text-sm px-2 py-1"
                     />
                 </div>
                 <Link to={'/register'}>
                     <FaUser className="cursor-pointer text-2xl hover:text-red-500" />
                 </Link>
 
-                <button className="md:hidden text-3xl"><IoMdMenu /></button>
+                <button className="md:hidden text-3xl" onClick={() => setopen(!open)}>{open ? <RxCross2/>:<IoMdMenu/>}</button>
 
             </div>
+            
+                {open && (
+
+                    <ul className="absolute top-18 justify-center ml-[280px] leading-4 items-center w-[22%] text-white text-[20px] backdrop-blur-lg z-50 flex flex-col gap-4 p-6 md:hidden">
+                        <Link to={'/home'}>
+                            <li className="">Home</li>
+                        </Link>
+                        <Link to={'/movie'}>
+                            <li className=" cursor-pointer">Movie</li>
+                        </Link>
+
+                        <Link>
+                            <li className=" cursor-pointer">Treding</li>
+                        </Link>
+
+                        <Link>
+                            <li className=" cursor-pointer">Contact</li>
+                        </Link>
+
+                        <Link>
+                            <li className=" cursor-pointer">Service</li>
+                        </Link>
+
+                    </ul>
+
+
+
+                )}
+           
+
+
+
+
+
+
+
         </div>
     )
 }

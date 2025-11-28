@@ -30,9 +30,10 @@ function Router1() {
             <Routes>
                 <Route element={<WithNav/>}>
                       <Route path='/' element={<Home/>}/>
-                      <Route path='movie' element={<Movie/>}/>
+                      <Route path='/movie' element={<Movie/>}/>
                       <Route path='/home' element={<Home/>}/>
                       <Route path='/:id' element={<Dynamic_router/>}/>
+                     
                 </Route>
                  <Route element={<WithoutNav/>}>
                       <Route path='register' element={<Register/>}/>
