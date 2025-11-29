@@ -15,7 +15,7 @@ function Dynamic_router() {
             <div className='bg-black'>
                 <Link to={`/${items.id}`}>
                     <section
-                        className="relative bg-cover bg-center bg-no-repeat text-white opacity-70 w-full h-[90vh]"
+                        className="relative bg-cover bg-center bg-no-repeat text-white opacity-70 w-full h-[50vh] md:h-[90vh]"
                         style={{ backgroundImage: `url(${items.img})` }}
                     >
                         <img src="" className="w-full h-full object-cover opacity-70" />
