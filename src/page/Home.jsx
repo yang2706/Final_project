@@ -8,15 +8,15 @@ function Home() {
   const card = [
     {
       id: 1,
-      title: 'Nika',
-      img: '/img/photo_2025-11-27_21-47-41.jpg',
-      rating: 'She is so cute'
+      title: 'Use Force',
+      img: 'https://m.media-amazon.com/images/M/MV5BNTgzMjg0NGYtZTI0OC00OWViLWJjOWYtNDVhMjUxMGZhNTgzXkEyXkFqcGc@._V1_.jpg',
+      rating: '9.2'
     },
     {
       id: 2,
-      title: 'Nika',
-      img: '/img/photo_2025-11-27_21-47-55.jpg',
-      rating: 'I love her'
+      title: 'Tom Hardy',
+      img: 'https://www.projectorreviews.com/wp-content/uploads/2025/04/Havoc.jpg',
+      rating: '9.8'
     },
     {
       id: 3,
