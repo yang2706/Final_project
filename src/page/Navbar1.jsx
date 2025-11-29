@@ -80,7 +80,7 @@ function Navbar1() {
                          <input
                         type="text"
                         placeholder="Search movies..."
-                        className="absolute md:hidden w-full backdrop-blur-lg z-50 top-18 text-black bg-white text-center left-0 outline-none text-sm px-2 py-1"
+                        className="absolute md:hidden w-full backdrop-blur-lg z-50 top-18 h-[35px] text-black bg-white text-center left-0 outline-none text-sm px-2 py-1"
                     />
                     )
                 }
