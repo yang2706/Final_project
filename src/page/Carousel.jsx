@@ -30,7 +30,7 @@ export default function CarouselHero() {
   }, []);
 
   return (
-    <div className="w-full h-[40vh] md:h-[70vh] relative bg-black overflow-hidden">
+    <div className="w-full h-[40vh] md:h-[70vh] opacity-70 relative overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -42,7 +42,7 @@ export default function CarouselHero() {
         >
           {/* Overlay */}
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black to-transparent flex flex-col justify-center px-10 text-white">
-            <h1 className="text-2xl md:text-5xl font-bold max-w-xl">
+            <h1 className="text-xl md:text-5xl max-w-60 font-bold md:max-w-xl">
               {slide.title}
             </h1>
             <p className="mt-4 text-md md:text-lg max-w-md opacity-80">
