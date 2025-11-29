@@ -1,61 +1,71 @@
 import React, { useState, useEffect } from "react";
 
-const images = [
-  "https://media-legend.sgp1.digitaloceanspaces.com/legend-prod/480251c7-01bb-478e-a18d-dba2a8d62a39.jpeg",
-  "https://media-legend.sgp1.digitaloceanspaces.com/legend-prod/45fbc23f-6282-405f-9bc5-cf2dec765988.jpeg",
-  "https://media-legend.sgp1.digitaloceanspaces.com/legend-prod/0ee58116-137c-4301-a9dd-875bb7d74bd9.jpeg",
-  "https://media-legend.sgp1.digitaloceanspaces.com/legend-prod/c4d845c4-8144-4aff-8a05-7cee65183da3.jpeg",
-  "https://media-legend.sgp1.digitaloceanspaces.com/legend-prod/84fe69e2-26bf-44a5-89c6-d5b31ad603ad.jpeg",
-  "https://media-legend.sgp1.digitaloceanspaces.com/legend-prod/84b3c60b-14af-43af-985b-575a287be91b.jpeg",
-  "https://media-legend.sgp1.digitaloceanspaces.com/legend-prod/30450d10-0d3b-447e-9ba3-f074be6dd76b.jpeg",
+const slides = [
+  {
+    img: "https://i.pinimg.com/1200x/3b/88/8a/3b888ae33caddd009ea0262a6dace304.jpg",
+    title: "Watch The Best Movies & Series",
+    desc: "Stream unlimited movies and series anytime, anywhere.",
+  },
+  {
+    img: "https://i.pinimg.com/1200x/97/4a/0b/974a0bc3ef606c46538f46bfe41055ce.jpg",
+    title: "New Releases Every Week",
+    desc: "Get access to the latest trending movies instantly.",
+  },
+  {
+    img: "https://i.pinimg.com/736x/fa/e1/24/fae1247d0b8841f643de7d5583b2dd36.jpg",
+    title: "Enjoy With Our Best Service ",
+    desc: "Watch on your phone, laptop, tablet, or smart TV.",
+  },
 ];
 
-export default function Carousel() {
-  const [index, setIndex] = useState(0);
+export default function CarouselHero() {
+  const [current, setCurrent] = useState(0);
 
-  // Auto slide every 3 seconds
+  // Auto-slide every 4 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((i) => (i + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
   }, []);
 
-  const prevSlide = () => setIndex((index - 1 + images.length) % images.length);
-  const nextSlide = () => setIndex((index + 1) % images.length);
-
   return (
-    <div className="w-full flex justify-center py-6">
-      <div className="relative w-[70%] h-[500px] overflow-hidden rounded-2xl shadow-xl">
-
-        {/* Images container */}
+    <div className="w-full h-[40vh] md:h-[70vh] relative bg-black overflow-hidden">
+      {/* Slides */}
+      {slides.map((slide, index) => (
         <div
-          className="flex transition-transform duration-700"
-          style={{ transform: `translateX(-${index * 100}%)` }}
+          key={index}
+          className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-all duration-700 ${
+            current === index ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ backgroundImage: `url(${slide.img})` }}
         >
-          {images.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              className="w-full h-[500px] object-cover flex-shrink-0"
-              alt=""
-            />
-          ))}
+          {/* Overlay */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black to-transparent flex flex-col justify-center px-10 text-white">
+            <h1 className="text-2xl md:text-5xl font-bold max-w-xl">
+              {slide.title}
+            </h1>
+            <p className="mt-4 text-md md:text-lg max-w-md opacity-80">
+              {slide.desc}
+            </p>
+            <button className="mt-6 bg-red-600 cursor-pointer md:w-[200px] px-4 py-2 w-[140px] rounded-lg text-lg font-semibold hover:bg-red-700 transition">
+              Explore Now
+            </button>
+          </div>
         </div>
+      ))}
 
-        {/* Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 px-3 py-2 rounded-full shadow"
-        >
-          ←
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 px-3 py-2 rounded-full shadow"
-        >
-          →
-        </button>
+      {/* Navigation Dots */}
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-3 h-3 rounded-full transition ${
+              current === index ? "bg-red-600 scale-110" : "bg-gray-400"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
