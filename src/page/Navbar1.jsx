@@ -22,7 +22,7 @@ function Navbar1() {
                 <Link to={'/movie'}>
                     <p className='cursor-pointer hover:text-white hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Movie</p>
                 </Link>
-                <Link>
+                <Link to={'/trending'}>
                     <p className='cursor-pointer hover:text-white hover:bg-white/15 bg-white/10 backdrop-blur-md border-b border-white/20 px-3 py-1 rounded-2xl hover:scale-105 hover:-translate-y-1.5 transition-transform duration-300'>Trending</p>
                 </Link>
                 <Link>
@@ -61,7 +61,7 @@ function Navbar1() {
                         <li className=" cursor-pointer">Movie</li>
                     </Link>
 
-                    <Link>
+                    <Link to={'/trending'}>
                         <li className=" cursor-pointer">Trending</li>
                     </Link>
 

@@ -7,6 +7,7 @@ import Movie from '../page/Movie'
 import Navbar1 from '../page/Navbar1'
 import Dynamic_router from './Dynamic_router'
 import Footer from '../page/Footer'
+import Trending from '../page/Trending'
 function WithNav() {
   return (
     <div>
@@ -35,6 +36,7 @@ function Router1() {
                       <Route path='/movie' element={<Movie/>}/>
                       <Route path='/home' element={<Home/>}/>
                       <Route path='/:id' element={<Dynamic_router/>}/>
+                      <Route path='/trending' element={<Trending/>}/>
                      
                 </Route>
                  <Route element={<WithoutNav/>}>
