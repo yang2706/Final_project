@@ -13,9 +13,9 @@ function SignUp() {
     */
 
   return (
-    <div className="w-full h-screen  flex items-center bg-center bg-cover justify-center p-4 bg-[url(https://i.pinimg.com/736x/6a/57/8e/6a578e74d2e707fe5d916b2b10986fb4.jpg)]">
+    <div className="w-full h-screen  flex items-center bg-center bg-cover bg-no-repeat justify-center p-4 bg-[url(https://i.pinimg.com/736x/b8/bc/89/b8bc89451a1d1fa5b2b1448d8470a65e.jpg)]">
       
-      <div className=" backdrop-brightness-75 backdrop-blur-lg w-[420px] h-[580px] rounded-2xl p-8 shadow-xl">
+      <div className=" backdrop-brightness-75 opacity-90 bg-black/20 backdrop-blur-lg w-[420px] h-[580px] rounded-2xl p-8 shadow-xl">
 
 
 

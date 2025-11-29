@@ -15,9 +15,9 @@ import { IoEye } from "react-icons/io5";
 function Register() {
   const [showPassword, setShowPassword] = React.useState(false);
   return (
-    <div className="w-full h-screen flex items-center  justify-center p-4 bg-cover bg-center bg-[url('https://i.pinimg.com/1200x/3b/88/8a/3b888ae33caddd009ea0262a6dace304.jpg')]">
+    <div className="w-full h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-4 bg-[url('https://i.pinimg.com/1200x/b2/88/53/b288539d28e799dd4ab0b1181e75ffaa.jpg')]">
       
-      <div className="relative backdrop-blur-lg backdrop-brightness-75 w-[420px] h-[580px] rounded-2xl p-8 shadow-xl">
+      <div className="relative opacity-90 bg-black/20 backdrop-blur-lg backdrop-brightness-75 w-[420px] h-[580px] rounded-2xl p-8 shadow-xl">
 
         {/* Tabs */}
         <div className="flex gap-6 mb-6">
@@ -67,7 +67,7 @@ function Register() {
         </button>
 
         {/* Google Button */}
-        <button className="w-full bg-[#ff6a00] text-white py-4 mt-3 rounded-lg flex items-center justify-center gap-1">
+        <button className="w-full bg-amber-900 text-white py-4 mt-3 rounded-lg flex items-center justify-center gap-1">
           <FcGoogle className='text-[20px]' />
           Sign in with Google
         </button>

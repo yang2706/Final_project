@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { item } from '../Data';
 import { Link } from 'react-router-dom';
 function Dynamic_router() {
+   
     const { id } = useParams();
     const items = item.find((item) => item.id === parseInt(id));
     if (!items) return <h1>Not found</h1>
@@ -31,6 +32,7 @@ function Dynamic_router() {
                 </Link>
 
             </div>
+           
         </div>
     )
 }
