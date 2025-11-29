@@ -35,10 +35,10 @@ function Footer() {
                         </Link>
 
                         <Link>
-                            <li className="hover:text-red-500 cursor-pointer">Series</li>
+                            <li className="hover:text-red-500 cursor-pointer">Trending</li>
                         </Link>
                         <Link>
-                            <li className="hover:text-red-500 cursor-pointer">Trending</li>
+                            <li className="hover:text-red-500 cursor-pointer">Service</li>
                         </Link>
 
 
