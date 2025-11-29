@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
 
 
+
 function Home() {
+  
   const card = [
     {
       id: 1,
@@ -142,16 +144,16 @@ function Home() {
 
   return (
     <div className="w-full bg-black text-white">
-     <Carousel/>
+      <Carousel />
       <div className='flex justify-center text-[17px] md:text-[30px] font-bold mt-5 '>
         <h1 className='text-red-500 '>New Movies</h1>
       </div>
       <div className='grid grid-cols-2 gap-5 mt-5 px-4 md:grid-cols-5'>
         {
           card.map(item => (
-            <div className='hover:-translate-y-2 cursor-pointer trtransition-all duration-300 object-cover'>
+            <div className='hover:-translate-y-2 cursor-pointer transition-all duration-300 object-cover' >
               <Link to={`/${item.id}`}>
-                  
+
                 <div className=''>
                   <img src={item.img} alt="" className='h-[200px] w-[300px] rounded-t-2xl md:h-[300px] md:w-[300px]' />
                 </div>
@@ -161,7 +163,7 @@ function Home() {
                   <p className='flex items-center gap-1'>{item.rating}<FaStar className='text-amber-400' /></p>
                 </div>
               </Link>
-              
+
             </div>
           ))
         }

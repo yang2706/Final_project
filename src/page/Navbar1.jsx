@@ -11,9 +11,9 @@ function Navbar1() {
     
 
     return (
-        <div className='w-full flex justify-between bg-black text-white py-2 px-6'>
+        <div className='w-full fixed top-0 left-0 z-50 opacity-90  flex justify-between bg-black/90 text-white py-2 px-6'>
             <div className='flex items-center'>
-                <img src="/img/image.png" alt="" className='w-[40px] md:w-[60px]' />
+                <img src="/img/image.png" alt="" className='w-[40px] md:w-[60px] rounded-2xl' />
             </div>
             <div className='hidden md:flex items-center text-[17px] gap-2 text-gray-300'>
                 <Link to={'/home'}>
