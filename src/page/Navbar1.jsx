@@ -7,6 +7,7 @@ import { RxCross2 } from "react-icons/rx";
 
 function Navbar1() {
     const [open, setopen] = useState(false);
+    const [search, setsearch] = useState(false);
     return (
         <div className='w-full flex justify-between bg-black text-white py-2 px-6'>
             <div className='flex items-center'>
@@ -31,7 +32,7 @@ function Navbar1() {
 
             </div>
             <div className='flex items-center gap-4'>
-                <div className=' items-center  bg-white/10 flex backdrop-blur-md px-3 py-1 rounded-full border border-neutral-700'>
+                <div className=' items-center  bg-white/10 flex backdrop-blur-md px-3 py-1 rounded-full border border-neutral-700' onClick={()=> setsearch(!search)}>
                     <CiSearch className='text-2xl' />
                     <input
                         type="text"
@@ -74,6 +75,15 @@ function Navbar1() {
 
 
                 )}
+                {
+                    search && (
+                         <input
+                        type="text"
+                        placeholder="Search movies..."
+                        className="absolute md:hidden w-full backdrop-blur-lg z-50 top-18 text-black bg-white text-center left-0 outline-none text-sm px-2 py-1"
+                    />
+                    )
+                }
            
 
 
