@@ -53,7 +53,7 @@ function Navbar1() {
 
             {open && (
 
-                <ul className="absolute top-18 ml-[277px] opacity-80 bg-black/20 leading-8 items-center w-[23%] text-white text-[20px] backdrop-blur-lg z-50 flex flex-col gap-4 p-6 md:hidden">
+                <ul className="absolute top-13 ml-[277px] opacity-90 bg-black/80 leading-8 items-center w-[23%] text-white text-[20px] backdrop-blur-lg z-50 flex flex-col gap-4  md:hidden">
                     <Link to={'/home'}>
                         <li className="">Home</li>
                     </Link>
