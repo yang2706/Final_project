@@ -3,6 +3,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaYoutubeSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,18 +26,29 @@ function Footer() {
                 {/* Menu */}
                 <div>
                     <h2 className="text-lg font-semibold mb-4">Menu</h2>
-                    <ul className="space-y-3">
-                        <li className="hover:text-red-500 cursor-pointer">Home</li>
-                        <li className="hover:text-red-500 cursor-pointer">Movies</li>
-                        <li className="hover:text-red-500 cursor-pointer">Series</li>
-                        <li className="hover:text-red-500 cursor-pointer">Trending</li>
+                    <ul className=" leading-8">
+                        <Link to={'/home'}>
+                            <li className="hover:text-red-500 cursor-pointer">Home</li>
+                        </Link>
+                        <Link to={'/movie'}>
+                            <li className="hover:text-red-500 cursor-pointer">Movies</li>
+                        </Link>
+
+                        <Link>
+                            <li className="hover:text-red-500 cursor-pointer">Series</li>
+                        </Link>
+                        <Link>
+                            <li className="hover:text-red-500 cursor-pointer">Trending</li>
+                        </Link>
+
+
                     </ul>
                 </div>
 
                 {/* Support */}
                 <div>
                     <h2 className="text-lg font-semibold mb-4">Support</h2>
-                    <ul className="space-y-3">
+                    <ul className=" leading-8">
                         <li className="hover:text-red-500 cursor-pointer">Help Center</li>
                         <li className="hover:text-red-500 cursor-pointer">Terms of Service</li>
                         <li className="hover:text-red-500 cursor-pointer">Privacy Policy</li>
@@ -52,7 +64,7 @@ function Footer() {
                         <a href="https://youtube.com/@xiaomi?si=je24KOi-LT84twxp" target='blank'><FaYoutubeSquare className='text-[30px] rounded-[10px] text-gray-400 hover:text-white cursor-pointer' /></a>
                         <a href="https://x.com/Xiaomi" target='blank'><FaSquareXTwitter className='text-[30px] rounded-[10px] text-gray-400 hover:text-white cursor-pointer' /></a>
                         <a href="https://www.instagram.com/xiaomi.global/" target='blank'><FaInstagramSquare className='text-[30px] rounded-[10px] text-gray-400 hover:text-white cursor-pointer' /></a>
-                       
+
                     </div>
                 </div>
             </div>
