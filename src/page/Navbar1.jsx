@@ -53,7 +53,7 @@ function Navbar1() {
 
             {open && (
 
-                <ul className="absolute top-18 ml-[277px] leading-8 items-center w-[23%] text-white text-[20px] backdrop-blur-lg z-50 flex flex-col gap-4 p-6 md:hidden">
+                <ul className="absolute top-18 ml-[277px] opacity-80 bg-black/20 leading-8 items-center w-[23%] text-white text-[20px] backdrop-blur-lg z-50 flex flex-col gap-4 p-6 md:hidden">
                     <Link to={'/home'}>
                         <li className="">Home</li>
                     </Link>
@@ -84,7 +84,7 @@ function Navbar1() {
                     <input
                         type="text"
                         placeholder="Search movies..."
-                        className="absolute md:hidden w-full backdrop-blur-lg z-50 top-18 h-[35px] text-black bg-white text-center left-0 outline-none text-sm px-2 py-1"
+                        className="absolute md:hidden w-full backdrop-blur-lg z-50 top-18 h-[35px] text-white bg-black/20 opacity-90 text-center left-0 outline-none text-sm px-2 py-1"
                     />
                 )
             }
